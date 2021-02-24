@@ -10,29 +10,16 @@
 	<script src="index.js"></script>
 </head>
 
-<ons-navigator id="navigator">
-	<ons-page>
-	  <div style="text-align: center; margin-top: 200px">
-	  <p>
-	    <ons-input id="username" placeholder="Username" modifier="underbar"></ons-input>
-	  </p>
+<ons-splitter>
+  <!-- The side menu -->
+  <ons-splitter-side id="menu" collapse width="220px">
+    <ons-page></ons-page>
+  </ons-splitter-side>
 
-	  <p>
-	    <ons-input
-	      id="password"
-	      placeholder="Password"
-	      type="password"
-	      modifier="underbar"
-	    >
-	    </ons-input>
-	  </p>
-
-	  <p>
-	    <ons-button onclick="login()">Sign in</ons-button>
-	  </p>
-	  </div>
-
-	</ons-page>
-</ons-navigator>
+  <!-- Everything not in the side menu -->
+  <ons-splitter-content>
+    <ons-navigator id="navigator" page="login.html"></ons-navigator>
+  </ons-splitter-content>
+</ons-splitter>
 
 </html>
